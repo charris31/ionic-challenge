@@ -12,6 +12,21 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-list>
+    <ion-list-header>
+      Friends
+    </ion-list-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <ion-item *ngFor = "let friends of friendsArr">
+      <ion-avatar slot="start">
+        <img src= {{friends.imgSrc}}>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{friends.name}}</h2>
+        <h3>Phone Number:</h3>
+        <p>{{friends.phoneNumber}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
 </ion-content>
